@@ -1,0 +1,94 @@
+/ {
+    combos {
+        compatible = "zmk,combos";
+
+        // left hand combos
+
+        combo_escape {
+            bindings = <&kp ESC>;
+            key-positions = <LT3 LT4>;
+        }
+
+        combo_percent {
+            bindings = <&kp PERCENT>;
+            key-positions = <LT0 LM0>;
+        };
+
+        combo_dollar {
+            bindings = <&kp DOLLAR>;
+            key-positions = <LT1 LM1>;
+        };
+
+        combo_pound {
+            bindings = <&kp POUND>;
+            key-positions = <LT2 LM2>;
+        };
+
+        combo_at {
+            bindings = <&kp AT>;
+            key-positions = <LT3 LM3>;
+        };
+
+        combo_exclamation {
+            bindings = <&kp EXCLAMATION>;
+            key-positions = <LT4 LM4>;
+        };
+
+        // right hand combos
+
+        combo_minus {
+            bindings = <&kp MINUS>;
+            key-positions = <RT1 RT2>;
+        };
+
+        combo_equal {
+            bindings = <&kp EQUAL>;
+            key-positions = <RT2 RT3>;
+        };
+
+        combo_backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <RT3 RT4>;
+        };
+
+        combo_caret {
+            bindings = <&kp CARET>;
+            key-positions = <RT0 RM0>;
+        };
+
+        combo_ampersand {
+            bindings = <&kp AMPERSAND>;
+            key-positions = <RT1 RM1>;
+        };
+
+        combo_asterisk {
+            bindings = <&kp ASTERISK>;
+            key-positions = <RT2 RM2>;
+        };
+
+        combo_lpar {
+            bindings = <&kp LPAR>;
+            key-positions = <RM1 RM2>;
+        }
+
+        combo_rpar {
+            bindings = <&kp RPAR>;
+            key-positions = <RM2 RM3>;
+        };
+
+        combo_backslash {
+            bindings = <&kp BACKSLASH>;
+            key-positions = <RM2 RB2>;
+        };
+
+        combo_lbkt {
+            bindings = <&kp LBKT>;
+            key-positions = <RB1 RB2>;
+        };
+        
+        combo_rbkt {
+            bindings = <&kp RBKT>;
+            key-positions = <RB2 RB3>;
+        };
+    }
+}
