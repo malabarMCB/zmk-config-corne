@@ -34,6 +34,21 @@
             key-positions = <LT4 LM4>;
         };
 
+        combo_copy {
+            bindings = <&kp LG(C)>;
+            key-positions = <LB3 LB2>;
+        };
+
+        combo_paste {
+            bindings = <&kp LG(V)>;
+            key-positions = <LB2 LB1>;
+        };
+
+        combo_cut {
+            bindings = <&kp LG(X)>;
+            key-positions = <LB3 LB1>;
+        };
+
         // right hand combos
 
         combo_minus {
@@ -48,7 +63,7 @@
 
         combo_backspace {
             bindings = <&kp BACKSPACE>;
-            key-positions = <RT3 RT4>;
+            key-positions = <RT3 RM3>;
         };
 
         combo_caret {
