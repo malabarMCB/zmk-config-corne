@@ -90,5 +90,5 @@
             bindings = <&kp RBKT>;
             key-positions = <RB2 RB3>;
         };
-    }
-}
+    };
+};
