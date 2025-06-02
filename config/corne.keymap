@@ -2,78 +2,17 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
+#include "settings.dtsi"
 #include "keys-positions.dtsi"
 #include "combos.dtsi"
 #include "behaviors/home-row-mods.dtsi"
+#include "behaviors/mod-morphs.dtsi"
+#include "behaviors/other.dtsi"
 
 #define DEF 0
 #define NAV 1
-#define SYM 2
-#define ADJ 3
-#define EXTRA 4
-
-/ {
-    behaviors {
-        hm: homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick_tap_ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-
-            quick-tap-ms = <180>;
-            global-quick-tap;
-        };
-
-        para: para {
-            compatible = "zmk,behavior-tap-dance";
-            label = "PARA";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_PARENTHESIS>, <&kp RIGHT_PARENTHESIS>;
-        };
-
-        caps: caps {
-            compatible = "zmk,behavior-caps-word";
-            label = "CAPS";
-            #binding-cells = <0>;
-            continue-list = <MINUS BACKSPACE>;
-        };
-
-        paraless: paraless {
-            compatible = "zmk,behavior-mod-morph";
-            label = "PARALESS";
-            bindings = <&kp LEFT_PARENTHESIS>, <&kp LESS_THAN>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        paragreat: paragreat {
-            compatible = "zmk,behavior-mod-morph";
-            label = "PARAGREAT";
-            bindings = <&kp RIGHT_PARENTHESIS>, <&kp GREATER_THAN>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-    };
-
-    macros {
-        browsertab: browsertab {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL>,
-                <&macro_tap>,
-                <&kp TAB>,
-                <&macro_release>,
-                <&kp LCTRL>;
-        };
-
-    };
+#define NUM 2
+#define FUNC 3
 
     //
 
@@ -81,7 +20,7 @@
         compatible = "zmk,keymap";
 
         DEF {
-            display-name = "Base";
+            display-name = "Default";
 
             bindings = <
 
@@ -92,71 +31,58 @@
 // ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼───────────────────────┼────────────────────────┼────────────────────────┤
      &none                    &kp Z                    &kp X                    &kp C                    &kp V                    &kp B                         &kp N                    &kp M                    &kp COMMA                &kp DOT                  &kp FSLH                &kp RSHFT
 // ╰────────────────────────┴────────────────────────┴────────────────────────┴────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼───────────────────────┼────────────────────────┼────────────────────────╯
-                                                                                &none                    &kp TAB                  &kp SPACE                     &kp SPACE                &kp RET                  &kp RSHFT
+                                                                                &mo NUM                  &lt FUNC TAB             &kp SPACE                     &kp SPACE                &kp RET                  &mm_shift_caps_word_r
 //    
       >;
         };
 
         NAV {
-            display-name = "NavNum";
-
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-            // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
+            display-name = "Nav";
 
             bindings = <
-&trans  &kp N1  &kp N2    &kp N3       &kp N4           &kp N5           &kp N6   &kp N7        &kp N8        &kp N9        &kp N0  &trans
-&caps_word  &trans  &trans    &kp UP_ARROW  &browsertab      &kp PAGE_UP      &kp N0   &kp N4  &kp N5        &kp N6  &trans  &trans
-&trans  &trans  &kp LEFT  &kp DOWN      &kp RIGHT_ARROW  &kp PAGE_DOWN    &trans   &kp N1  &kp N2  &kp N3  &trans  &trans
-                          &kp LGUI      &trans           &kp SPACE        &kp RET  &trans        &trans
-            >;
+
+// ╭────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────╮    ╭────────────────────────┬────────────────────────┬────────────────────────┬───────────────────────┬────────────────────────┬────────────────────────╮
+     &none                    &kp Q                    &kp W                    &kp E                    &kp R                    &kp T                         &kp Y                    &kp U                    &kp UP                   &kp O                    &kp P                   &kp BACKSPACE
+// ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼───────────────────────┼────────────────────────┼────────────────────────┤
+     &none                    &hm_l LCTRL A            &hm_l LALT S             &hm_l LGUI D             &hm_shift_l LSHFT F      &kp G                         &kp H                    &kp LEFT                 &kp DOWN                 &kp RIGHT                &hm_r RCTRL SEMI        &kp SQT
+// ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼───────────────────────┼────────────────────────┼────────────────────────┤
+     &none                    &kp Z                    &kp X                    &kp C                    &kp V                    &kp B                         &kp N                    &kp M                    &kp COMMA                &kp DOT                  &kp FSLH                &kp RSHFT
+// ╰────────────────────────┴────────────────────────┴────────────────────────┴────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼───────────────────────┼────────────────────────┼────────────────────────╯
+                                                                                &mo NUM                  &lt FUNC TAB             &kp SPACE                     &kp SPACE                &kp RET                  &mm_shift_caps_word_r
+//    
+      >;
         };
 
-        SYM {
-            display-name = "Symbols";
-
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
+        NUM {
+            display-name = "Num";
 
             bindings = <
-&trans  &kp EXCL  &kp AT          &kp HASH        &kp DLLR         &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LEFT_PARENTHESIS  &kp RPAR  &trans
-&trans  &trans    &trans          &kp UP_ARROW    &trans           &kp GRAVE    &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT              &kp BSLH  &trans
-&trans  &trans    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp TILDE    &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC              &kp PIPE  &trans
-                                  &kp LGUI        &trans           &kp SPACE    &kp RET    &trans     &trans
-            >;
+
+// ╭────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────╮    ╭────────────────────────┬────────────────────────┬────────────────────────┬───────────────────────┬────────────────────────┬────────────────────────╮
+     &none                    &kp Q                    &kp N7                   &kp N8                   &kp N9                   &kp T                         &kp Y                    &kp U                    &kp I                    &kp O                    &kp P                   &kp BACKSPACE
+// ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼───────────────────────┼────────────────────────┼────────────────────────┤
+     &none                    &hm_l LCTRL N0           &hm_l LALT N4            &hm_l LGUI N5            &hm_shift_l LSHFT N6     &kp G                         &kp H                    &hm_shift_r RSHFT J      &hm_r RGUI K             &hm_r RALT L             &hm_r RCTRL SEMI        &kp SQT
+// ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼───────────────────────┼────────────────────────┼────────────────────────┤
+     &none                    &kp Z                    &kp N1                   &kp N2                   &kp N3                   &kp B                         &kp N                    &kp M                    &kp COMMA                &kp DOT                  &kp FSLH                &kp RSHFT
+// ╰────────────────────────┴────────────────────────┴────────────────────────┴────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼───────────────────────┼────────────────────────┼────────────────────────╯
+                                                                                &mo NUM                  &lt FUNC TAB             &kp SPACE                     &kp SPACE                &kp RET                  &mm_shift_caps_word_r
+//    
+      >;
         };
 
-        ADJ {
-            display-name = "System";
+        FUNC {
+            display-name = "Func";
             bindings = <
-&trans  &kp F1        &kp F2        &kp F3        &kp F4      &kp F5            &kp F6  &kp F7  &kp F8  &kp F9  &kp F10      &trans
-&trans  &kp F11       &kp F12       &trans        &trans      &studio_unlock            &trans  &trans  &trans  &trans  &trans       &trans
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR  &bt BT_CLR_ALL    &trans  &trans  &trans  &trans  &bootloader  &trans
-                                    &trans        &trans      &trans            &trans  &trans  &trans
-            >;
-        };
-        EXTRA {
-            display-name = "extra";
-            bindings = <
-&trans  &trans        &trans        &trans        &trans      &trans            &trans  &trans  &trans  &trans  &trans      &trans
-&trans  &trans       &trans       &trans        &trans      &trans            &trans  &trans  &trans  &trans  &trans       &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &bootloader  &trans
-                                    &trans        &trans      &trans            &trans  &trans  &trans
-            >;
-        };
-    };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        l3 {
-            if-layers = <1 2>;
-            then-layer = <3>;
+// ╭────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────╮    ╭────────────────────────┬────────────────────────┬────────────────────────┬───────────────────────┬────────────────────────┬────────────────────────╮
+     &none                    &kp F10                  &kp F7                   &kp F8                   &kp F9                   &kp T                         &kp Y                    &kp U                    &kp I                    &kp O                    &kp P                   &kp BACKSPACE
+// ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼───────────────────────┼────────────────────────┼────────────────────────┤
+     &none                    &hm_l LCTRL F11          &hm_l LALT F4            &hm_l LGUI F5            &hm_shift_l LSHFT F6     &kp G                         &kp H                    &hm_shift_r RSHFT J      &hm_r RGUI K             &hm_r RALT L             &hm_r RCTRL SEMI        &kp SQT
+// ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼───────────────────────┼────────────────────────┼────────────────────────┤
+     &none                    &kp F12                  &kp F1                   &kp F2                   &kp F3                   &kp B                         &kp N                    &kp M                    &kp COMMA                &kp DOT                  &kp FSLH                &kp RSHFT
+// ╰────────────────────────┴────────────────────────┴────────────────────────┴────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼───────────────────────┼────────────────────────┼────────────────────────╯
+                                                                                &mo NUM                  &lt FUNC TAB             &kp SPACE                     &kp SPACE                &kp RET                  &mm_shift_caps_word_r
+//    
+      >;
         };
-    };
 };

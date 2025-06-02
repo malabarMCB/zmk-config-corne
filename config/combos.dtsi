@@ -6,7 +6,7 @@
 
         combo_escape {
             bindings = <&kp ESC>;
-            key-positions = <LT3 LT4>;
+            key-positions = <LT2 LT3>;
         };
 
         combo_percent {

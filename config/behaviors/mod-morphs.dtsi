@@ -1,0 +1,21 @@
+/ {
+        /*
+         * Sticky shift + Caps Word
+         *
+         * Usage:
+         * Tap: Sticky shift
+         * HMR-Shift-Tap: Caps Word
+         * Double Tap: Caps Word
+         *   - The first tap activates sticky shift mod
+         *   - The second tap is now a shift + press, which activates
+         *     the mod morph
+         * Hold: Shift
+         */
+        mm_shift_caps_word_r: mm_shift_caps_word_r {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&sk RSHFT>, <&caps_word>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+}
