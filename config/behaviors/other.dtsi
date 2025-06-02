@@ -1,7 +1,5 @@
 #include <dt-bindings/zmk/outputs.h>
 
-#define TD_TAPPING_TERM 300
-
 / {
 
     behaviors {
