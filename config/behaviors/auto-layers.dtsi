@@ -1,11 +1,10 @@
-#define MODIFIERS = LSHFT RSHFT LCTRL RCTRL LALT RALT LGUI RGUI
-
 / {
     behaviors {
         nav_word: nav_word {
             compatible = "zmk,behavior-auto-layer";
             #binding-cells = <1>;
-            continue-list = <LEFT DOWN UP RIGHT PG_DN PG_UP MODIFIERS>;
+            continue-list = <LEFT DOWN UP RIGHT PG_DN PG_UP 
+                LSHFT RSHFT LCTRL RCTRL LALT RALT LGUI RGUI>;
             ignore-modifiers;
         };
 
@@ -13,7 +12,8 @@
             compatible = "zmk,behavior-auto-layer";
             #binding-cells = <1>;
             continue-list = <N0 N1 N2 N3 N4 N5 N6 N7 N8 N9 
-                DOT COMMA MINUS UNDERSCORE DELETE LPAR RPAR MODIFIERS>;
+                DOT COMMA MINUS UNDERSCORE DELETE LPAR RPAR 
+                LSHFT RSHFT LCTRL RCTRL LALT RALT LGUI RGUI>;
             ignore-modifiers;
         };
     };
