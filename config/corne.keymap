@@ -2,6 +2,11 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
+#define DEF 0
+#define NAV 1
+#define NUM 2
+#define FUNC 3
+
 #include "settings.dtsi"
 #include "keys-positions.dtsi"
 #include "combos.dtsi"
@@ -9,11 +14,6 @@
 #include "behaviors/mod-morphs.dtsi"
 #include "behaviors/other.dtsi"
 #include "behaviors/auto-layers.dtsi"
-
-#define DEF 0
-#define NAV 1
-#define NUM 2
-#define FUNC 3
 
     //
 / {
