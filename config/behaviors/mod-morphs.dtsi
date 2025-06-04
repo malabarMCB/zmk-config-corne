@@ -22,7 +22,7 @@
         mm_parentecies: mm_parentecies {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp LBKT>, <&kp RBKT>;
+            bindings = <&kp LPAR>, <&kp RPAR>;
 
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
