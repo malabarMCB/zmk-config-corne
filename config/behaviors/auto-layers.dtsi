@@ -11,7 +11,7 @@
             compatible = "zmk,behavior-auto-layer";
             #binding-cells = <1>;
             continue-list = <N0 N1 N2 N3 N4 N5 N6 N7 N8 N9 
-                DOT COMMA MINUS UNDERSCORE DELETE LBRACKET RBRACKET>;
+                DOT COMMA MINUS UNDERSCORE DELETE LBKT RBKT>;
             ignore-modifiers;
         };
     };
