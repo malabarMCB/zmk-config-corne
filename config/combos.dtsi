@@ -34,6 +34,11 @@
             key-positions = <LT4 LM4>;
         };
 
+        combo_num_word {
+            bindings = <&num_word NUM>;
+            key-positions = <LM1 LM3>;
+        };
+
         combo_copy {
             bindings = <&kp LG(C)>;
             key-positions = <LB3 LB2>;
@@ -61,11 +66,6 @@
             key-positions = <RT2 RT3>;
         };
 
-        combo_backspace {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <RT3 RM3>;
-        };
-
         combo_caret {
             bindings = <&kp CARET>;
             key-positions = <RT0 RM0>;
@@ -81,14 +81,19 @@
             key-positions = <RT2 RM2>;
         };
 
-        combo_lpar {
-            bindings = <&kp LPAR>;
+        combo_parentecies {
+            bindings = <&mm_parentecies>;
             key-positions = <RM1 RM2>;
         };
 
-        combo_rpar {
-            bindings = <&kp RPAR>;
+        combo_backspace_delete {
+            bindings = <&mm_backspace_delete>;
             key-positions = <RM2 RM3>;
+        };
+
+        combo_nav_word {
+            bindings = <&nav_word NAV>;
+            key-positions = <RM1 RM3>;
         };
 
         combo_backslash {

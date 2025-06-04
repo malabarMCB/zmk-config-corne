@@ -18,4 +18,20 @@
 
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        mm_parentecies: mm_parentecies {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LBRACKET>, <&kp RBRACKET>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_backspace_delete: mm_backspace_delete {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp BACKSPACE>, <&kp DELETE>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
 };
