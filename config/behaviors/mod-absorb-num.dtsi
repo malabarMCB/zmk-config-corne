@@ -60,7 +60,7 @@
     mm_ma_mo_num_gui: mm_ma_mo_num_gui {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&mm_ma_mo_num_alt>, <&ma_mo_num_gui;
+        bindings = <&mm_ma_mo_num_alt>, <&ma_mo_num_gui>;
 
         mods = <(MOD_LGUI|MOD_RGUI)>;
     };
