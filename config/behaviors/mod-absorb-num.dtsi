@@ -1,0 +1,55 @@
+/ {
+    macros {
+        lm {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <2>;
+            bindings = <&macro_param_1to1>, <&macro_press &mo MACRO_PLACEHOLDER>,
+                <&macro_param_2to1>, <&macro_press &kp MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>,
+                <&macro_param_2to1>, <&release &kp MACRO_PLACEHOLDER>,
+                <&macro_param_1to1>, <&release &mo MACRO_PLACEHOLDER>
+        }
+
+        mmm {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <2>;
+            bindings = <&macro_param_1to1>, <&macro_press &MACRO_PLACEHOLDER>,
+                <&macro_param_2to1>, <&macro_press &kp MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>,
+                <&macro_param_2to1>, <&release &kp MACRO_PLACEHOLDER>,
+                <&macro_param_1to1>, <&release &MACRO_PLACEHOLDER>
+        }
+    }
+
+    mm_ma_mo_num_ctrl: mm_ma_mo_num_ctrl {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&mo NUM>, <&lm NUM LCTRL>;
+
+        mods = <(MOD_LCTRL|MOD_RCTRL)>;
+    };
+
+    mm_ma_mo_num_alt: mm_ma_mo_num_alt {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&mm_ma_mo_num_ctrl>, <&mmm mm_ma_mo_num_ctrl LALT>;
+
+        mods = <(MOD_LALT|MOD_RALT)>;
+    };
+
+    mm_ma_mo_num_gui: mm_ma_mo_num_gui {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&mm_ma_mo_num_alt>, <&mmm mm_ma_mo_num_alt LGUI>;
+
+        mods = <(MOD_LGUI|MOD_RGUI)>;
+    };
+
+    mm_ma_mo_num_shift: mm_ma_mo_num_shift {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&mm_ma_mo_num_gui>, <&mmm mm_ma_mo_num_gui LSHFT>;
+
+        mods = <(MOD_LSHFT|MOD_RSHFT)>;
+    };
+};
