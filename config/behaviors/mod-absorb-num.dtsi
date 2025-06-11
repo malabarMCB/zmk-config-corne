@@ -23,7 +23,7 @@
         ma_mo_num_gui {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &mm_ma_mo_num_alt,
+            bindings = <&macro_press &mm_ma_mo_num_alt>,
                 <&macro_press &kp LGUI>,
                 <&macro_pause_for_release>,
                 <&release &mm_ma_mo_num_alt>,
@@ -33,7 +33,7 @@
         ma_mo_num_shift {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &mm_ma_mo_num_alt,
+            bindings = <&macro_press &mm_ma_mo_num_alt>,
                 <&macro_press &kp LSHFT>,
                 <&macro_pause_for_release>,
                 <&release &mm_ma_mo_num_gui>,
