@@ -1,6 +1,6 @@
 / {
     macros {
-        lm {
+        lm: lm {
             compatible = "zmk,behavior-macro";
             #binding-cells = <2>;
             bindings = <&macro_param_1to1>, <&macro_press &mo MACRO_PLACEHOLDER>,
@@ -10,7 +10,7 @@
                 <&macro_param_1to1>, <&macro_release &mo MACRO_PLACEHOLDER>;
         };
 
-        ma_mo_num_alt {
+        ma_mo_num_alt: ma_mo_num_alt {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_press &mm_ma_mo_num_ctrl>,
@@ -20,7 +20,7 @@
                 <&macro_release &kp LALT>;
         };
 
-        ma_mo_num_gui {
+        ma_mo_num_gui: ma_mo_num_gui {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_press &mm_ma_mo_num_alt>,
@@ -30,7 +30,7 @@
                 <&macro_release &kp LGUI>;
         };
 
-        ma_mo_num_shift {
+        ma_mo_num_shift: ma_mo_num_shift {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_press &mm_ma_mo_num_alt>,
