@@ -6,8 +6,8 @@
             bindings = <&macro_param_1to1>, <&macro_press &mo MACRO_PLACEHOLDER>,
                 <&macro_param_2to1>, <&macro_press &kp MACRO_PLACEHOLDER>,
                 <&macro_pause_for_release>,
-                <&macro_param_2to1>, <&release &kp MACRO_PLACEHOLDER>,
-                <&macro_param_1to1>, <&release &mo MACRO_PLACEHOLDER>;
+                <&macro_param_2to1>, <&macro_release &kp MACRO_PLACEHOLDER>,
+                <&macro_param_1to1>, <&macro_release &mo MACRO_PLACEHOLDER>;
         };
 
         ma_mo_num_alt {
@@ -16,8 +16,8 @@
             bindings = <&macro_press &mm_ma_mo_num_ctrl>,
                 <&macro_press &kp LALT>,
                 <&macro_pause_for_release>,
-                <&release &mm_ma_mo_num_ctrl>,
-                <&release &kp LALT>;
+                <&macro_release &mm_ma_mo_num_ctrl>,
+                <&macro_release &kp LALT>;
         };
 
         ma_mo_num_gui {
@@ -26,8 +26,8 @@
             bindings = <&macro_press &mm_ma_mo_num_alt>,
                 <&macro_press &kp LGUI>,
                 <&macro_pause_for_release>,
-                <&release &mm_ma_mo_num_alt>,
-                <&release &kp LGUI>;
+                <&macro_release &mm_ma_mo_num_alt>,
+                <&macro_release &kp LGUI>;
         };
 
         ma_mo_num_shift {
@@ -36,8 +36,8 @@
             bindings = <&macro_press &mm_ma_mo_num_alt>,
                 <&macro_press &kp LSHFT>,
                 <&macro_pause_for_release>,
-                <&release &mm_ma_mo_num_gui>,
-                <&release &kp LSHFT>;
+                <&macro_release &mm_ma_mo_num_gui>,
+                <&macro_release &kp LSHFT>;
         };
     };
 
