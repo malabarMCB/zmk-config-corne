@@ -44,6 +44,7 @@
         bindings = <&mo NUM>, <&lm NUM LCTRL>;
 
         mods = <(MOD_LCTL|MOD_RCTL)>;
+        keep-mods = <(MOD_LSFT|MOD_RSFT|MOD_LGUI|MOD_RGUI|MOD_LALT|MOD_RALT|MOD_LCTL|MOD_RCTL)>;
     };
 
     mm_ma_mo_num_alt: mm_ma_mo_num_alt {
@@ -52,6 +53,7 @@
         bindings = <&mm_ma_mo_num_ctrl>, <&ma_mo_num_alt>;
 
         mods = <(MOD_LALT|MOD_RALT)>;
+        keep-mods = <(MOD_LSFT|MOD_RSFT|MOD_LGUI|MOD_RGUI|MOD_LALT|MOD_RALT|MOD_LCTL|MOD_RCTL)>;
     };
 
     mm_ma_mo_num_gui: mm_ma_mo_num_gui {
@@ -60,6 +62,7 @@
         bindings = <&mm_ma_mo_num_alt>, <&ma_mo_num_gui>;
 
         mods = <(MOD_LGUI|MOD_RGUI)>;
+        keep-mods = <(MOD_LSFT|MOD_RSFT|MOD_LGUI|MOD_RGUI|MOD_LALT|MOD_RALT|MOD_LCTL|MOD_RCTL)>;
     };
 
     mm_ma_mo_num_shift: mm_ma_mo_num_shift {
@@ -68,5 +71,6 @@
         bindings = <&mm_ma_mo_num_gui>, <&ma_mo_num_shift>;
 
         mods = <(MOD_LSFT|MOD_RSFT)>;
+        keep-mods = <(MOD_LSFT|MOD_RSFT|MOD_LGUI|MOD_RGUI|MOD_LALT|MOD_RALT|MOD_LCTL|MOD_RCTL)>;
     };
 };
