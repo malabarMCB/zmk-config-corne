@@ -8,7 +8,7 @@
                 <&macro_pause_for_release>,
                 <&macro_param_2to1>, <&release &kp MACRO_PLACEHOLDER>,
                 <&macro_param_1to1>, <&release &mo MACRO_PLACEHOLDER>
-        }
+        };
 
         mmm {
             compatible = "zmk,behavior-macro";
@@ -18,8 +18,8 @@
                 <&macro_pause_for_release>,
                 <&macro_param_2to1>, <&release &kp MACRO_PLACEHOLDER>,
                 <&macro_param_1to1>, <&release &MACRO_PLACEHOLDER>
-        }
-    }
+        };
+    };
 
     mm_ma_mo_num_ctrl: mm_ma_mo_num_ctrl {
         compatible = "zmk,behavior-mod-morph";
