@@ -1,7 +1,7 @@
 / {
     macros {
         lm: lm {
-            compatible = "zmk,behavior-macro";
+            compatible = "zmk,behavior-macro-two-param";
             #binding-cells = <2>;
             bindings = <&macro_param_1to1>, <&macro_press &mo MACRO_PLACEHOLDER>,
                 <&macro_param_2to1>, <&macro_press &kp MACRO_PLACEHOLDER>,
