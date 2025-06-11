@@ -70,6 +70,6 @@
         #binding-cells = <0>;
         bindings = <&mm_ma_mo_num_gui>, <&ma_mo_num_shift>;
 
-        mods = <(MOD_LSHFT|MOD_RSHFT)>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
     };
 };
