@@ -11,7 +11,6 @@
         };
     };
 
-
      ma_lo_num_wo_lsft_wo_lgui_wo_lalt: ma_lo_num_wo_lsft_wo_lgui_wo_lalt {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
@@ -33,7 +32,7 @@
      ma_lo_num_wo_lsft_wo_lgui: ma_lo_num_wo_lsft_wo_lgui {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <ma_lo_num_wo_lsft_wo_lgui_wo_lalt>, <ma_lo_num_wo_lsft_wo_lgui_w_lalt>;
+        bindings = <&ma_lo_num_wo_lsft_wo_lgui_wo_lalt>, <&ma_lo_num_wo_lsft_wo_lgui_w_lalt>;
 
         mods = <(MOD_LALT)>;
         keep-mods = <(MOD_LSFT|MOD_LGUI|MOD_LALT|MOD_LCTL)>;
@@ -60,7 +59,7 @@
      ma_lo_num_wo_lsft_w_lgui: ma_lo_num_wo_lsft_w_lgui {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <ma_lo_num_wo_lsft_w_lgui_wo_lalt>, <ma_lo_num_wo_lsft_w_lgui_w_lalt>;
+        bindings = <&ma_lo_num_wo_lsft_w_lgui_wo_lalt>, <&ma_lo_num_wo_lsft_w_lgui_w_lalt>;
 
         mods = <(MOD_LALT)>;
         keep-mods = <(MOD_LSFT|MOD_LGUI|MOD_LALT|MOD_LCTL)>;
@@ -69,7 +68,7 @@
      ma_lo_num_wo_lsft: ma_lo_num_wo_lsft {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <ma_lo_num_wo_lsft_wo_lgui>, <ma_lo_num_wo_lsft_w_lgui>;
+        bindings = <&ma_lo_num_wo_lsft_wo_lgui>, <&ma_lo_num_wo_lsft_w_lgui>;
 
         mods = <(MOD_LGUI)>;
         keep-mods = <(MOD_LSFT|MOD_LGUI|MOD_LALT|MOD_LCTL)>;
@@ -96,7 +95,7 @@
      ma_lo_num_w_lsft_wo_lgui: ma_lo_num_w_lsft_wo_lgui {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <ma_lo_num_w_lsft_wo_lgui_wo_lalt>, <ma_lo_num_w_lsft_wo_lgui_w_lalt>;
+        bindings = <&ma_lo_num_w_lsft_wo_lgui_wo_lalt>, <&ma_lo_num_w_lsft_wo_lgui_w_lalt>;
 
         mods = <(MOD_LALT)>;
         keep-mods = <(MOD_LSFT|MOD_LGUI|MOD_LALT|MOD_LCTL)>;
@@ -123,7 +122,7 @@
      ma_lo_num_w_lsft_w_lgui: ma_lo_num_w_lsft_w_lgui {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <ma_lo_num_w_lsft_w_lgui_wo_lalt>, <ma_lo_num_w_lsft_w_lgui_w_lalt>;
+        bindings = <&ma_lo_num_w_lsft_w_lgui_wo_lalt>, <&ma_lo_num_w_lsft_w_lgui_w_lalt>;
 
         mods = <(MOD_LALT)>;
         keep-mods = <(MOD_LSFT|MOD_LGUI|MOD_LALT|MOD_LCTL)>;
@@ -132,7 +131,7 @@
      ma_lo_num_w_lsft: ma_lo_num_w_lsft {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <ma_lo_num_w_lsft_wo_lgui>, <ma_lo_num_w_lsft_w_lgui>;
+        bindings = <&ma_lo_num_w_lsft_wo_lgui>, <&ma_lo_num_w_lsft_w_lgui>;
 
         mods = <(MOD_LGUI)>;
         keep-mods = <(MOD_LSFT|MOD_LGUI|MOD_LALT|MOD_LCTL)>;
@@ -141,7 +140,7 @@
      ma_lo_num: ma_lo_num {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <ma_lo_num_wo_lsft>, <ma_lo_num_w_lsft>;
+        bindings = <&ma_lo_num_wo_lsft>, <&ma_lo_num_w_lsft>;
 
         mods = <(MOD_LSFT)>;
         keep-mods = <(MOD_LSFT|MOD_LGUI|MOD_LALT|MOD_LCTL)>;

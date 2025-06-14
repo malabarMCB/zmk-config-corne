@@ -32,7 +32,7 @@ function generate(i) {
         
         template = getTemplate(curr, modNames[i], [woMod, wMod])
     } else {
-        template = getTemplate(curr, modNames[i], [curr + '_wo_' + modNames[i], curr + '_w_' + modNames[i]])
+        template = getTemplate(curr, modNames[i], ['&' + curr + '_wo_' + modNames[i], '&' + curr + '_w_' + modNames[i]])
 
         mods[i] = false
         generate(i + 1, mods)
