@@ -39,6 +39,11 @@
             key-positions = <LM1 LM3>;
         };
 
+        combo_tab {
+            bindings = <&kp TAB>;
+            key-positions = <LM2 LM3>;
+        };
+
         combo_copy {
             bindings = <&kp LG(C)>;
             key-positions = <LB3 LB2>;
