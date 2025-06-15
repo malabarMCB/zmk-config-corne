@@ -1,7 +1,8 @@
 const mods = [false, false, false]
 const modWraps = ['LS', 'LG', 'LA', 'LC']
 const modNames = ['lsft', 'lgui', 'lalt', 'lctl']
-const modAbsorberCommand = '&slm NUM'
+const modAbsorberCommandWomod = '&sl NUM'
+const modAbsorberCommandWmod = '&slm NUM'
 const modAbsorberName = 'ma_slm_num'
 
 generate(0)
@@ -25,11 +26,11 @@ function generate(i) {
         if(woMod) {
             wMod = `${modWraps[i]}(${woMod})`
 
-            woMod = `${modAbsorberCommand} ${woMod}`
-            wMod = `${modAbsorberCommand} ${wMod}`
+            woMod = `${modAbsorberCommandWmod} ${woMod}`
+            wMod = `${modAbsorberCommandWmod} ${wMod}`
         } else {
-            woMod = modAbsorberCommand
-            wMod = `${modAbsorberCommand} ${modNames[3].toUpperCase()}`
+            woMod = modAbsorberCommandWomod
+            wMod = `${modAbsorberCommandWmod} ${modNames[3].toUpperCase()}`
         }
         
         template = getTemplate(curr, modNames[i], [woMod, wMod])

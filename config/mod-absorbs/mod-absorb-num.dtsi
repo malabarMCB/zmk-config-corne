@@ -2,7 +2,7 @@
     ma_slm_num_wo_lsft_wo_lgui_wo_lalt: ma_slm_num_wo_lsft_wo_lgui_wo_lalt {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&slm NUM>, <&slm NUM LCTL>;
+        bindings = <&sl NUM>, <&slm NUM LCTL>;
 
         mods = <(MOD_LCTL)>;
         keep-mods = <(MOD_LSFT|MOD_LGUI|MOD_LALT|MOD_LCTL)>;
@@ -131,5 +131,6 @@
         bindings = <&ma_slm_num_wo_lsft>, <&ma_slm_num_w_lsft>;
 
         mods = <(MOD_LSFT)>;
-     };
+        keep-mods = <(MOD_LSFT|MOD_LGUI|MOD_LALT|MOD_LCTL)>;
+    };
 };
