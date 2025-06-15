@@ -10,12 +10,14 @@
                 <&macro_param_1to1>, <&macro_release &mo MACRO_PLACEHOLDER>;
         };
     };
+
      ma_lo_num_wo_lsft_wo_lgui_wo_lalt: ma_lo_num_wo_lsft_wo_lgui_wo_lalt {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&mo NUM>, <&lm NUM LCTL>;
 
         mods = <(MOD_LCTL)>;
+        keep-mods = <(MOD_LSFT|MOD_LGUI|MOD_LALT|MOD_LCTL)>;
     };
 
      ma_lo_num_wo_lsft_wo_lgui_w_lalt: ma_lo_num_wo_lsft_wo_lgui_w_lalt {
@@ -24,6 +26,7 @@
         bindings = <&lm NUM LALT>, <&lm NUM LC(LALT)>;
 
         mods = <(MOD_LCTL)>;
+        keep-mods = <(MOD_LSFT|MOD_LGUI|MOD_LALT|MOD_LCTL)>;
     };
 
      ma_lo_num_wo_lsft_wo_lgui: ma_lo_num_wo_lsft_wo_lgui {
@@ -32,6 +35,7 @@
         bindings = <&ma_lo_num_wo_lsft_wo_lgui_wo_lalt>, <&ma_lo_num_wo_lsft_wo_lgui_w_lalt>;
 
         mods = <(MOD_LALT)>;
+        keep-mods = <(MOD_LSFT|MOD_LGUI|MOD_LALT|MOD_LCTL)>;
     };
 
      ma_lo_num_wo_lsft_w_lgui_wo_lalt: ma_lo_num_wo_lsft_w_lgui_wo_lalt {
@@ -40,6 +44,7 @@
         bindings = <&lm NUM LGUI>, <&lm NUM LC(LGUI)>;
 
         mods = <(MOD_LCTL)>;
+        keep-mods = <(MOD_LSFT|MOD_LGUI|MOD_LALT|MOD_LCTL)>;
     };
 
      ma_lo_num_wo_lsft_w_lgui_w_lalt: ma_lo_num_wo_lsft_w_lgui_w_lalt {
@@ -48,6 +53,7 @@
         bindings = <&lm NUM LA(LGUI)>, <&lm NUM LC(LA(LGUI))>;
 
         mods = <(MOD_LCTL)>;
+        keep-mods = <(MOD_LSFT|MOD_LGUI|MOD_LALT|MOD_LCTL)>;
     };
 
      ma_lo_num_wo_lsft_w_lgui: ma_lo_num_wo_lsft_w_lgui {
@@ -56,6 +62,7 @@
         bindings = <&ma_lo_num_wo_lsft_w_lgui_wo_lalt>, <&ma_lo_num_wo_lsft_w_lgui_w_lalt>;
 
         mods = <(MOD_LALT)>;
+        keep-mods = <(MOD_LSFT|MOD_LGUI|MOD_LALT|MOD_LCTL)>;
     };
 
      ma_lo_num_wo_lsft: ma_lo_num_wo_lsft {
@@ -64,6 +71,7 @@
         bindings = <&ma_lo_num_wo_lsft_wo_lgui>, <&ma_lo_num_wo_lsft_w_lgui>;
 
         mods = <(MOD_LGUI)>;
+        keep-mods = <(MOD_LSFT|MOD_LGUI|MOD_LALT|MOD_LCTL)>;
     };
 
      ma_lo_num_w_lsft_wo_lgui_wo_lalt: ma_lo_num_w_lsft_wo_lgui_wo_lalt {
@@ -72,6 +80,7 @@
         bindings = <&lm NUM LSFT>, <&lm NUM LC(LSFT)>;
 
         mods = <(MOD_LCTL)>;
+        keep-mods = <(MOD_LSFT|MOD_LGUI|MOD_LALT|MOD_LCTL)>;
     };
 
      ma_lo_num_w_lsft_wo_lgui_w_lalt: ma_lo_num_w_lsft_wo_lgui_w_lalt {
@@ -80,6 +89,7 @@
         bindings = <&lm NUM LA(LSFT)>, <&lm NUM LC(LA(LSFT))>;
 
         mods = <(MOD_LCTL)>;
+        keep-mods = <(MOD_LSFT|MOD_LGUI|MOD_LALT|MOD_LCTL)>;
     };
 
      ma_lo_num_w_lsft_wo_lgui: ma_lo_num_w_lsft_wo_lgui {
@@ -88,6 +98,7 @@
         bindings = <&ma_lo_num_w_lsft_wo_lgui_wo_lalt>, <&ma_lo_num_w_lsft_wo_lgui_w_lalt>;
 
         mods = <(MOD_LALT)>;
+        keep-mods = <(MOD_LSFT|MOD_LGUI|MOD_LALT|MOD_LCTL)>;
     };
 
      ma_lo_num_w_lsft_w_lgui_wo_lalt: ma_lo_num_w_lsft_w_lgui_wo_lalt {
@@ -96,6 +107,7 @@
         bindings = <&lm NUM LG(LSFT)>, <&lm NUM LC(LG(LSFT))>;
 
         mods = <(MOD_LCTL)>;
+        keep-mods = <(MOD_LSFT|MOD_LGUI|MOD_LALT|MOD_LCTL)>;
     };
 
      ma_lo_num_w_lsft_w_lgui_w_lalt: ma_lo_num_w_lsft_w_lgui_w_lalt {
@@ -104,6 +116,7 @@
         bindings = <&lm NUM LA(LG(LSFT))>, <&lm NUM LC(LA(LG(LSFT)))>;
 
         mods = <(MOD_LCTL)>;
+        keep-mods = <(MOD_LSFT|MOD_LGUI|MOD_LALT|MOD_LCTL)>;
     };
 
      ma_lo_num_w_lsft_w_lgui: ma_lo_num_w_lsft_w_lgui {
@@ -112,6 +125,7 @@
         bindings = <&ma_lo_num_w_lsft_w_lgui_wo_lalt>, <&ma_lo_num_w_lsft_w_lgui_w_lalt>;
 
         mods = <(MOD_LALT)>;
+        keep-mods = <(MOD_LSFT|MOD_LGUI|MOD_LALT|MOD_LCTL)>;
     };
 
      ma_lo_num_w_lsft: ma_lo_num_w_lsft {
@@ -120,6 +134,7 @@
         bindings = <&ma_lo_num_w_lsft_wo_lgui>, <&ma_lo_num_w_lsft_w_lgui>;
 
         mods = <(MOD_LGUI)>;
+        keep-mods = <(MOD_LSFT|MOD_LGUI|MOD_LALT|MOD_LCTL)>;
     };
 
      ma_lo_num: ma_lo_num {
@@ -128,5 +143,6 @@
         bindings = <&ma_lo_num_wo_lsft>, <&ma_lo_num_w_lsft>;
 
         mods = <(MOD_LSFT)>;
+        keep-mods = <(MOD_LSFT|MOD_LGUI|MOD_LALT|MOD_LCTL)>;
     };
 };

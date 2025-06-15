@@ -52,5 +52,6 @@ function getTemplate(name, mod, bindings) {
         bindings = <${bindings[0]}>, <${bindings[1]}>;
 
         mods = <(MOD_${mod.toUpperCase()})>;
+        keep-mods = <(MOD_LSFT|MOD_LGUI|MOD_LALT|MOD_LCTL)>;
     };`
 }
