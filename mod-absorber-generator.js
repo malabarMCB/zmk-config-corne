@@ -1,9 +1,9 @@
 const mods = [false, false, false]
 const modWraps = ['LS', 'LG', 'LA', 'LC']
 const modNames = ['lsft', 'lgui', 'lalt', 'lctl']
-const modAbsorberCommandWomod = '&sl NUM'
-const modAbsorberCommandWmod = '&slm NUM'
-const modAbsorberName = 'ma_slm_num'
+const modAbsorberCommandWomod = '&mo FUNC'
+const modAbsorberCommandWmod = '&lm FUNC'
+const modAbsorberName = 'ma_lm_func'
 
 generate(0)
 

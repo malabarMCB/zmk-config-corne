@@ -1,0 +1,158 @@
+/ {
+    /*
+    * lt ma_lm_func TAB
+    */
+    behaviors {
+        lt_ma_lm_func: lt_ma_lm_func {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+
+            // Increase layer tap time
+            tapping-term-ms = <300>;
+
+            // Quickly tap-tap-holding the lt button will repeat the tap behavior
+            // For example enter-enter-hold, will output multiple enter while you
+            // keep holding the key.
+            // But holding enter without double tapping, will activate the layer.
+            quick-tap-ms = <200>;
+
+            flavor = "balanced";
+            bindings = <&kp>, <&ma_lm_func>;
+        };
+    };
+
+     ma_lm_func_wo_lsft_wo_lgui_wo_lalt: ma_lm_func_wo_lsft_wo_lgui_wo_lalt {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&mo FUNC>, <&lm FUNC LCTL>;
+
+        mods = <(MOD_LCTL)>;
+        keep-mods = <(MOD_LSFT|MOD_LGUI|MOD_LALT|MOD_LCTL)>;
+    };
+
+     ma_lm_func_wo_lsft_wo_lgui_w_lalt: ma_lm_func_wo_lsft_wo_lgui_w_lalt {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&lm FUNC LALT>, <&lm FUNC LC(LALT)>;
+
+        mods = <(MOD_LCTL)>;
+        keep-mods = <(MOD_LSFT|MOD_LGUI|MOD_LALT|MOD_LCTL)>;
+    };
+
+     ma_lm_func_wo_lsft_wo_lgui: ma_lm_func_wo_lsft_wo_lgui {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&ma_lm_func_wo_lsft_wo_lgui_wo_lalt>, <&ma_lm_func_wo_lsft_wo_lgui_w_lalt>;
+
+        mods = <(MOD_LALT)>;
+        keep-mods = <(MOD_LSFT|MOD_LGUI|MOD_LALT|MOD_LCTL)>;
+    };
+
+     ma_lm_func_wo_lsft_w_lgui_wo_lalt: ma_lm_func_wo_lsft_w_lgui_wo_lalt {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&lm FUNC LGUI>, <&lm FUNC LC(LGUI)>;
+
+        mods = <(MOD_LCTL)>;
+        keep-mods = <(MOD_LSFT|MOD_LGUI|MOD_LALT|MOD_LCTL)>;
+    };
+
+     ma_lm_func_wo_lsft_w_lgui_w_lalt: ma_lm_func_wo_lsft_w_lgui_w_lalt {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&lm FUNC LA(LGUI)>, <&lm FUNC LC(LA(LGUI))>;
+
+        mods = <(MOD_LCTL)>;
+        keep-mods = <(MOD_LSFT|MOD_LGUI|MOD_LALT|MOD_LCTL)>;
+    };
+
+     ma_lm_func_wo_lsft_w_lgui: ma_lm_func_wo_lsft_w_lgui {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&ma_lm_func_wo_lsft_w_lgui_wo_lalt>, <&ma_lm_func_wo_lsft_w_lgui_w_lalt>;
+
+        mods = <(MOD_LALT)>;
+        keep-mods = <(MOD_LSFT|MOD_LGUI|MOD_LALT|MOD_LCTL)>;
+    };
+
+     ma_lm_func_wo_lsft: ma_lm_func_wo_lsft {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&ma_lm_func_wo_lsft_wo_lgui>, <&ma_lm_func_wo_lsft_w_lgui>;
+
+        mods = <(MOD_LGUI)>;
+        keep-mods = <(MOD_LSFT|MOD_LGUI|MOD_LALT|MOD_LCTL)>;
+    };
+
+     ma_lm_func_w_lsft_wo_lgui_wo_lalt: ma_lm_func_w_lsft_wo_lgui_wo_lalt {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&lm FUNC LSFT>, <&lm FUNC LC(LSFT)>;
+
+        mods = <(MOD_LCTL)>;
+        keep-mods = <(MOD_LSFT|MOD_LGUI|MOD_LALT|MOD_LCTL)>;
+    };
+
+     ma_lm_func_w_lsft_wo_lgui_w_lalt: ma_lm_func_w_lsft_wo_lgui_w_lalt {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&lm FUNC LA(LSFT)>, <&lm FUNC LC(LA(LSFT))>;
+
+        mods = <(MOD_LCTL)>;
+        keep-mods = <(MOD_LSFT|MOD_LGUI|MOD_LALT|MOD_LCTL)>;
+    };
+
+     ma_lm_func_w_lsft_wo_lgui: ma_lm_func_w_lsft_wo_lgui {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&ma_lm_func_w_lsft_wo_lgui_wo_lalt>, <&ma_lm_func_w_lsft_wo_lgui_w_lalt>;
+
+        mods = <(MOD_LALT)>;
+        keep-mods = <(MOD_LSFT|MOD_LGUI|MOD_LALT|MOD_LCTL)>;
+    };
+
+     ma_lm_func_w_lsft_w_lgui_wo_lalt: ma_lm_func_w_lsft_w_lgui_wo_lalt {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&lm FUNC LG(LSFT)>, <&lm FUNC LC(LG(LSFT))>;
+
+        mods = <(MOD_LCTL)>;
+        keep-mods = <(MOD_LSFT|MOD_LGUI|MOD_LALT|MOD_LCTL)>;
+    };
+
+     ma_lm_func_w_lsft_w_lgui_w_lalt: ma_lm_func_w_lsft_w_lgui_w_lalt {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&lm FUNC LA(LG(LSFT))>, <&lm FUNC LC(LA(LG(LSFT)))>;
+
+        mods = <(MOD_LCTL)>;
+        keep-mods = <(MOD_LSFT|MOD_LGUI|MOD_LALT|MOD_LCTL)>;
+    };
+
+     ma_lm_func_w_lsft_w_lgui: ma_lm_func_w_lsft_w_lgui {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&ma_lm_func_w_lsft_w_lgui_wo_lalt>, <&ma_lm_func_w_lsft_w_lgui_w_lalt>;
+
+        mods = <(MOD_LALT)>;
+        keep-mods = <(MOD_LSFT|MOD_LGUI|MOD_LALT|MOD_LCTL)>;
+    };
+
+     ma_lm_func_w_lsft: ma_lm_func_w_lsft {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&ma_lm_func_w_lsft_wo_lgui>, <&ma_lm_func_w_lsft_w_lgui>;
+
+        mods = <(MOD_LGUI)>;
+        keep-mods = <(MOD_LSFT|MOD_LGUI|MOD_LALT|MOD_LCTL)>;
+    };
+
+     ma_lm_func: ma_lm_func {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&ma_lm_func_wo_lsft>, <&ma_lm_func_w_lsft>;
+
+        mods = <(MOD_LSFT)>;
+        keep-mods = <(MOD_LSFT|MOD_LGUI|MOD_LALT|MOD_LCTL)>;
+    };
+};
