@@ -17,6 +17,7 @@
 #include "behaviors/auto-layers.dtsi"
 #include "macros.dtsi"
 #include "mod-absorbs/mod-absorb-num.dtsi"
+#include "mod-absorbs/mod-absorb-func.dtsi"
 
     //
 / {
