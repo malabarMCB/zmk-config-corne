@@ -4,6 +4,11 @@
 
         // left hand combos
 
+        combo_exclamation {
+            bindings = <&kp EXCLAMATION>;
+            key-positions = <LT0 LT1>;
+        };
+
         combo_escape {
             bindings = <&kp ESC>;
             key-positions = <LT2 LT3>;
@@ -29,11 +34,6 @@
             key-positions = <LT3 LM3>;
         };
 
-        combo_exclamation {
-            bindings = <&kp EXCLAMATION>;
-            key-positions = <LT4 LM4>;
-        };
-
         combo_num_word {
             bindings = <&num_word NUM>;
             key-positions = <LM1 LM3>;
@@ -56,11 +56,6 @@
 
         // right hand combos
 
-        combo_minus {
-            bindings = <&kp MINUS>;
-            key-positions = <RT1 RT2>;
-        };
-
         combo_equal {
             bindings = <&kp EQUAL>;
             key-positions = <RT2 RT3>;
@@ -81,6 +76,11 @@
             key-positions = <RT2 RM2>;
         };
 
+        combo_minus {
+            bindings = <&kp MINUS>;
+            key-positions = <RM0 RM1>;
+        };
+
         combo_parentecies {
             bindings = <&mm_parentecies>;
             key-positions = <RM1 RM2>;
@@ -96,11 +96,6 @@
             key-positions = <RM1 RM3>;
         };
 
-        combo_backslash {
-            bindings = <&kp BACKSLASH>;
-            key-positions = <RM2 RB2>;
-        };
-
         combo_lbkt {
             bindings = <&kp LBKT>;
             key-positions = <RB1 RB2>;
@@ -109,6 +104,11 @@
         combo_rbkt {
             bindings = <&kp RBKT>;
             key-positions = <RB2 RB3>;
+        };
+
+        combo_backslash {
+            bindings = <&kp BACKSLASH>;
+            key-positions = <RB1 RB3>;
         };
     };
 };
